@@ -1,8 +1,4 @@
-<html>
-  <head>
-    <title>PHP Test</title>
-  </head>
-  <body>
-    <?php echo '<p>Hello World</p>'; ?> 
-
-</html>
+<?php
+// Mark Iya 219600000
+echo "Welcome to COSC4806 Assignment 2!";
+?>
