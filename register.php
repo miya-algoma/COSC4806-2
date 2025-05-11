@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($user->userExists($username)) {
         $message = " Username already exists.";
     } else {
-        // user creation will be added in next commit
-        $message = " Validation passed.";
+        $user->create_user($username, $password1);
+        $message = " Account created. You can now <a href='login.php'>log in</a>.";
     }
 }
 ?>
