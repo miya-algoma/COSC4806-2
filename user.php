@@ -3,6 +3,13 @@
 require_once('database.php');
 
 class User {
-    // starting structure
+
+    public function get_all_users() {
+        $db = db_connect();
+        $statement = $db->prepare("SELECT * FROM users");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
 ?>
