@@ -9,7 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password1 = $_POST['password'];
     $password2 = $_POST['confirm_password'];
 
-    // Validation logic and user creation will come in next commits
+    $user = new User();
+
+    if ($password1 !== $password2) {
+        $message = " Passwords do not match.";
+    } elseif (strlen($password1) < 10) {
+        $message = " Password must be at least 10 characters.";
+    } elseif ($user->userExists($username)) {
+        $message = " Username already exists.";
+    } else {
+        // user creation will be added in next commit
+        $message = " Validation passed.";
+    }
 }
 ?>
 
