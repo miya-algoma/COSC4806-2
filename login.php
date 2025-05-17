@@ -1,5 +1,6 @@
 <?php
 // Mark Iya 219600000
+//COSC4806 Assignment 2
 require_once('user.php');
 session_start();
 
@@ -16,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: index.php");
         exit();
     } else {
-        $message = "❌ Invalid username or password.";
+        $message = "Invalid username or password.";
     }
 }
 ?>
