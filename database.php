@@ -1,5 +1,6 @@
 <?php
 // Mark Iya 219600000
+//COSC4806 Assignment 2
 require_once('config.php');
 
 function db_connect() {
